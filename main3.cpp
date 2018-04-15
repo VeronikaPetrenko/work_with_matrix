@@ -13,7 +13,7 @@ int main(){
 	cout<<"Введите размер матрицы:  ";
 	cin>>n>>m;
 	cout<<endl;
-	int **matrix=new int *[n];				//создаём матрицу из рандомных чисел 
+	int **matrix=new int *[n];			//создаём матрицу из рандомных чисел 
 	for(i=0;i<n;i++)
 	matrix[i]=new int [m];
 	for(int i=0; i<n;i++)
@@ -25,13 +25,13 @@ int main(){
 			cout<<matrix[i][j]<<" ";}
 		cout<<endl;}
 	cout<<endl;
-	for(int i=0; i<n;i++){					//считаем количеству с помощью условии 
-		for( j=0;j<m;j++){					//для 2-х значных >9 и <100
+	for(int i=0; i<n;i++){				//считаем количество с помощью условии 
+		for( j=0;j<m;j++){			//для 2-х значных >9 и <100
 			if(matrix[i][j]>9&&matrix[i][j]<100){
 				kold++;
 				su=su+matrix[i][j];
 				}
-			if(matrix[i][j]>99){			//для 3-х значных >99
+			if(matrix[i][j]>99){		//для 3-х значных >99
 				kolt++;
 				sy=sy+matrix[i][j];}
 		}
