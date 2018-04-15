@@ -8,8 +8,8 @@
 using namespace std;
 int main(){
 	setlocale(LC_ALL,"Russian");
-	int n,m,i,j,kold,kolt;					//kold-количесвто 2-х значных ;kolt- количество 3-х значных;
-	kold=0,kolt=0;
+	int n,m,i,j,kold,kolt,sd,st,su,sy;		//kold-количесвто 2-х значных ;kolt- количество 3-х значных;sd-ср.арифм.2-х значных;st-ср.арифм.3-х значных
+	kold=0,kolt=0,su=0,sy=0;
 	cout<<"Введите размер матрицы:  ";
 	cin>>n>>m;
 	cout<<endl;
@@ -28,11 +28,18 @@ int main(){
 	for(int i=0; i<n;i++){					//считаем количеству с помощью условии 
 		for( j=0;j<m;j++){					//для 2-х значных >9 и <100
 			if(matrix[i][j]>9&&matrix[i][j]<100){
-				kold++;}
+				kold++;
+				su=su+matrix[i][j];
+				}
 			if(matrix[i][j]>99){			//для 3-х значных >99
-				kolt++;}
+				kolt++;
+				sy=sy+matrix[i][j];}
 		}
 	}
+	sd=su/kold;
+	st=sy/kolt;
 	cout<<"Количесвто 2-х значных: "<<kold<<endl;
-	cout<<"Количество 3-х значных: "<<kolt;
+	cout<<"Количество 3-х значных: "<<kolt<<endl;
+	cout<<"Ср.арифм. 2-х значных: "<<sd<<endl;
+	cout<<"Ср.арифм. 3-х значных: "<<st<<endl;
 }
