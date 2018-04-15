@@ -7,6 +7,11 @@ int main(){
 	int n,m,i,j;
 	cout<<"Введите размер матрицы:  ";
 	cin>>n>>m;
+	if(n<=0||m<=0){					//защита от дурака
+		cout<<"Ошибка!"<<endl;
+		system("pause");
+		return 0;
+	}
 	cout<<endl;
 	int **matrix=new int *[n];					//создаём матрицу из рандомных чисел 
 	for(i=0;i<n;i++)
