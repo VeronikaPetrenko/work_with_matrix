@@ -4,7 +4,7 @@
 using namespace std;
 int main(){
 	setlocale(LC_ALL,"Russian");
-	int n,m,i,j;
+	int n,i,j;
 	cout<<"Введите размер матрицы:  ";
 	cin>>n;
 	cout<<endl;
