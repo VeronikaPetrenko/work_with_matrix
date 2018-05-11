@@ -30,7 +30,7 @@ int main(){
 	for( i=0; i<n;i++){
 		for( j=0;j<n;j++){
 			if(j==i){
-			swap(arr[i][j],arr[i][n-j-1]);}}
+			swap(arr[i][j],arr[i][n-j-1]);}} //меняем побочную и главную диагонали
 	}
 	cout<<"Изменённая матрица : "<<endl;
 	for( i=0; i<n;i++){
